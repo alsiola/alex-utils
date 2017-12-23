@@ -8,7 +8,7 @@
         "test:watch": "jest --watchAll",
         "test":
             "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-        "build": "tsc && yarn test"
+        "build": "tsc"
     },
     "readme": "https://github.com/alsiola/README.md",
     "repository": {
