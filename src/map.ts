@@ -25,19 +25,21 @@ export const mapObject = <T, U>(f: A1SyncFunction<T, U>) => <K extends string>(
 export const mapObjectAsync = <T, U>(f: A1Function<T, U>) => <K extends string>(
     a: P<{ [k in K]: P<T> }>
 ): Promise<{ [k in K]: U }> => {
-    return Promise.resolve(a).then(async o => {
-        const results: Array<{ key: K; value: T }> = (await Promise.all(
+    return Promise.resolve(a).then(o =>
+        Promise.all(
             keys(o).map(async key => ({
                 key,
-                value: await Promise.resolve(o[key]).then(f as any)
+                value: await Promise.resolve(o[key] as P<T>).then(f)
             }))
-        )) as any;
-        return results.reduce(
-            (out, { key, value }) => ({
-                ...out,
-                [key]: value
-            }),
-            {}
-        ) as { [k in K]: U };
-    });
+        ).then(results => {
+            return results.reduce(
+                (out, { key, value }) =>
+                    ({
+                        ...(out as object),
+                        [key]: value
+                    } as { [k in K]: U }),
+                {} as { [k in K]: U }
+            );
+        })
+    );
 };
