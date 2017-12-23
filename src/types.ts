@@ -6,7 +6,12 @@ export type A1SyncFunction<T, U> = (a: T) => U;
 export type A2Function<T, U, V> = (a: T, b: U) => V | Promise<V>;
 export type A2SyncFunction<T, U, V> = (a: T, b: U) => V;
 
+export type A3Function<T, U, V, W> = (a: T, b: U, c: V) => W | Promise<W>;
+export type A3SyncFunction<T, U, V, W> = (a: T, b: U, c: V) => W;
+
 export type CurriedA2Function<T, U, V> = (a: T) => A1SyncFunction<U, V>;
+
+export type P<T> = T | Promise<T>;
 
 export type Reducer<U, V, W = V> = (
     out: V,
