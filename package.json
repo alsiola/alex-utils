@@ -1,35 +1,30 @@
 {
     "name": "alex-utils",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "",
-    "main": "index.js",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
     "scripts": {
         "test:watch": "jest --watchAll"
     },
+    "readme": "https://github.com/alsiola/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alsiola/alex-utils.git"
+    },
     "keywords": [],
-    "author": "",
+    "author": "Alex Young<http://github.com/alsiola>",
     "license": "ISC",
     "jest": {
         "transform": {
             "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
         },
-        "testPathIgnorePatterns": [
-            "/node_modules/",
-            "/lib/"
-        ],
+        "testPathIgnorePatterns": ["/node_modules/", "/lib/"],
         "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js",
-            "jsx",
-            "json"
-        ],
-        "collectCoverageFrom": [
-            "src/**/*.ts"
-        ]
+        "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
+        "collectCoverageFrom": ["src/**/*.ts"]
     },
-    "dependencies": {
+    "devDependencies": {
         "@types/jest": "^21.1.8",
         "@types/node": "^8.0.58",
         "jest": "^21.2.1",
