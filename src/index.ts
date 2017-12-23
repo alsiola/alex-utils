@@ -1,3 +1,4 @@
+export { always } from "./always";
 export { curry2 } from "./curry";
 export { delay } from "./delay";
 export { flip, curryFlip } from "./flip";
