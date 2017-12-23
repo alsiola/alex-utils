@@ -1,0 +1,40 @@
+{
+    "name": "alex-utils",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test:watch": "jest --watchAll"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "jest": {
+        "transform": {
+            "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+        },
+        "testPathIgnorePatterns": [
+            "/node_modules/",
+            "/lib/"
+        ],
+        "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json"
+        ],
+        "collectCoverageFrom": [
+            "src/**/*.ts"
+        ]
+    },
+    "dependencies": {
+        "@types/jest": "^21.1.8",
+        "@types/node": "^8.0.58",
+        "jest": "^21.2.1",
+        "ts-jest": "^21.2.4",
+        "ts-node": "^4.0.1",
+        "typescript": "^2.7.0-dev.20171221"
+    }
+}
