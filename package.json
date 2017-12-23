@@ -26,7 +26,8 @@
         "testPathIgnorePatterns": ["/node_modules/", "/lib/"],
         "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
         "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
-        "collectCoverageFrom": ["lib/**/*.js"]
+        "collectCoverageFrom": ["lib/**/*.js"],
+        "coveragePathIgnorePatterns": ["lib/types.js"]
     },
     "devDependencies": {
         "@types/jest": "^21.1.8",
