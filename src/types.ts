@@ -22,6 +22,11 @@ export type Reducer<U, V, W = V> = (
 
 export type Propable<T> = IDictionary<T | IDictionary<T>>;
 
+export type Recordable<K extends string, KV extends string, T> = {
+    [k in K]: KV
+} &
+    IDictionary<any>;
+
 export interface IDictionary<T> {
     [key: string]: T;
 }

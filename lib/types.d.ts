@@ -9,6 +9,9 @@ export declare type CurriedA2Function<T, U, V> = (a: T) => A1SyncFunction<U, V>;
 export declare type P<T> = T | Promise<T>;
 export declare type Reducer<U, V, W = V> = (out: V, curr: U, currentIndex?: number, array?: U[]) => W;
 export declare type Propable<T> = IDictionary<T | IDictionary<T>>;
+export declare type Recordable<K extends string, KV extends string, T> = {
+    [k in K]: KV;
+} & IDictionary<any>;
 export interface IDictionary<T> {
     [key: string]: T;
 }
