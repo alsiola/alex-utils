@@ -1,5 +1,7 @@
 import { curry2 } from "./curry";
 import { flip } from "./flip";
+import { promisify } from "./promisify";
 
-export const delay = (ms: number) =>
-    new Promise<void>(curry2(flip(setTimeout))(ms));
+export type Delay = (ms: number) => Promise<void>;
+
+export const delay: Delay = promisify(curry2(flip(setTimeout)));
