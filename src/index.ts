@@ -1,5 +1,5 @@
 export { always } from "./always";
-export { curry2 } from "./curry";
+export { curryV, curry2 } from "./curry";
 export { delay } from "./delay";
 export { flip, curryFlip } from "./flip";
 export { fork, forkAsync } from "./fork";

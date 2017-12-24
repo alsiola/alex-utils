@@ -9,7 +9,10 @@ export type A2SyncFunction<T, U, V> = (a: T, b: U) => V;
 export type A3Function<T, U, V, W> = (a: T, b: U, c: V) => W | Promise<W>;
 export type A3SyncFunction<T, U, V, W> = (a: T, b: U, c: V) => W;
 
-export type CurriedA2Function<T, U, V> = (a: T) => A1SyncFunction<U, V>;
+export interface CurriedA2Function<T, U, V> {
+    (a: T): (b: U) => V;
+    (a: T, b: U): V;
+}
 
 export type P<T> = T | Promise<T>;
 
