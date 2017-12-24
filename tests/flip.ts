@@ -1,4 +1,4 @@
-import { flip, pipe, curryFlip } from "../lib";
+import { flip, curryFlip } from "../lib";
 
 describe("flip", () => {
     it("reverses argument order in arity-2 function", () => {

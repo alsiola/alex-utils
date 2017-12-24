@@ -6,6 +6,12 @@ import {
     P
 } from "./types";
 
+/**
+ * Fork combinator
+ * @param fCombine Combining function
+ * @param fLeft Left branch function
+ * @param fRight Right branch function
+ */
 export const fork = <T, U, V, W>(
     fCombine: A2SyncFunction<U, V, W>,
     fLeft: A1SyncFunction<T, U>,
