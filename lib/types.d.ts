@@ -9,6 +9,12 @@ export interface CurriedA2Function<T, U, V> {
     (a: T): (b: U) => V;
     (a: T, b: U): V;
 }
+export interface CurriedA3Function<T, U, V, W> {
+    (a: T): (b: U) => (c: V) => W;
+    (a: T, b: U): (c: V) => W;
+    (a: T): (b: U, c: V) => W;
+    (a: T, b: U, c: V): W;
+}
 export declare type P<T> = T | Promise<T>;
 export declare type Reducer<U, V, W = V> = (out: V, curr: U, currentIndex?: number, array?: U[]) => W;
 export declare type Recordable<K extends string, KV extends string> = {

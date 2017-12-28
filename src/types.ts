@@ -15,6 +15,13 @@ export interface CurriedA2Function<T, U, V> {
     (a: T, b: U): V;
 }
 
+export interface CurriedA3Function<T, U, V, W> {
+    (a: T): (b: U) => (c: V) => W;
+    (a: T, b: U): (c: V) => W;
+    (a: T): (b: U, c: V) => W;
+    (a: T, b: U, c: V): W;
+}
+
 // Shorthand to make some definitions more legible
 export type P<T> = T | Promise<T>;
 
