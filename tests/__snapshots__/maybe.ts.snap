@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`maybe apply throws if wrapped value is not function 1`] = `"Apply is only callable if wrapped value is a function"`;

@@ -15,4 +15,6 @@ export { reduce, reduceAsync } from "./reduce";
 export { sum } from "./sum";
 export { tap } from "./tap";
 
+export * from "./maybe";
+
 export * from "./types";
